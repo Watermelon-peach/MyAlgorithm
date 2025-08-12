@@ -2,30 +2,115 @@
 //
 
 #include <iostream>
+#include <string>
+#include <numeric>
+#include <vector>
 
 using namespace std;
 
-//피보나치 수열 구하기
-long long fibo(int n)
+//매개변수 받은 vector 출력
+template <typename T>
+void print_vector(const vector<T>& vec)
+{
+	for (const auto& e : vec)
+	{
+		cout << e << ", ";
+	}
+	cout << endl;
+}
+
+//vector 순열해서 출력하기, k: vector 인덱스로 순열을 시작하는 위치
+void permutation(vector<int>& vec, int k)
 {
 	//기저 조건
-	if (n <= 1)
-		return 1;
+	if (k == vec.size() - 1)
+	{
+		print_vector(vec);
+		return;
+	}
 
 	//재귀호출부
-	return fibo(n - 1) + fibo(n - 2);
+	for (int i = 0; i < vec.size(); i++)
+	{
+		swap(vec[k], vec[i]);
+		permutation(vec, k + 1);
+		swap(vec[k], vec[i]);
+	}
 }
 
 int main()
 {
-	//1부터 10까지 피보나치 값 나열
-	/*for (int i = 1; i <= 10; i++)
-	{
-		cout << fibo(i) << ", ";
-	}*/
-	
-	cout << fibo(48) << endl;
+	vector<int> vec{ 1, 2, 3, 4 };
+	permutation(vec, 0);
 }
+
+////최대 공약수 구하기
+//int gcd(int a, int b)
+//{
+//	//기저 조건
+//	if (b == 0)
+//		return a;
+//
+//	//재귀 호출부
+//	return gcd(b, a % b);
+//}
+//
+////최소 공배수 구하기
+//int lcm(int a, int b)
+//{
+//	return a * b / gcd(a, b);
+//}
+//
+//int main()
+//{
+//	cout << gcd(18, 24) << endl;
+//	cout << lcm(24, 18) << endl;
+//
+//	//cout << std::gcd(18, 24) << endl;
+//	//cout << std::lcm(24, 18) << endl;
+//
+//
+//}
+
+
+////매개변수로 받은 문자열을 뒤집어 반환
+//string reverse(const string& str)
+//{
+//	//기저 조건
+//	if (str.length() == 0)
+//		return "";
+//
+//	//재귀호출부
+//	return reverse(str.substr(1)) + str[0];
+//}
+//
+//int main()
+//{
+//	string str = "HELLO";
+//	cout << reverse(str) << endl;
+//}
+
+////피보나치 수열 구하기
+//long long fibo(int n)
+//{
+//	//기저 조건
+//	if (n <= 1)
+//		return 1;
+//
+//	//재귀호출부
+//	return fibo(n - 1) + fibo(n - 2);
+//}
+//
+//int main()
+//{
+//	//1부터 10까지 피보나치 값 나열
+//	/*for (int i = 1; i <= 10; i++)
+//	{
+//		cout << fibo(i) << ", ";
+//	}*/
+//	
+//	cout << fibo(48) << endl;
+//}
 
 ////n! 구하기
 //long long factorial(int n)
