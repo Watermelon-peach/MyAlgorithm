@@ -3,72 +3,193 @@
 
 #include <iostream>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
-//병합시 병합내용을 담을 임시 변수
-int buff[256];
+using namespace std;
 
-//병합 
-void merge(int data[], int left, int mid, int right)
+//선형 탐색
+bool linear_search(int data[], int n, int target)
 {
-	int i = left, j = mid + 1, k = left;
-
-	while (i <= mid && j <= right)
+	for (int i = 0; i < n; i++)
 	{
-		if (data[i] <= data[j])
+		if (data[i] == target)
 		{
-			buff[k++] = data[i++];
-		}
-		else
-		{
-			buff[k++] = data[j++];
+			return true;
 		}
 	}
 
-	while (i <= mid)
-	{
-		buff[k++] = data[i++];
-	}
-
-	while (j <= right)
-	{
-		buff[k++] = data[j++];
-	}
-
-	//정렬된 임시 저장 데이터를 data에 다시 저장
-	for (int x = left; x <= right; x++)
-	{
-		data[x] = buff[x];
-	}
+	return false;
 }
 
-//병합 정렬
-void merge_sort(int data[], int left, int right)
+//이진 탐색 - (오름차순)정렬된 데이터
+bool binarty_search(int data[], int n, int target)
 {
-	//기저 조건
-	if (left >= right)
-		return;
+	int lower = 0;			//시작 인덱스
+	int upper = n - 1;		//마지막 인덱스
 
-	//재귀 호출
-	int mid = (left + right) / 2;
-	merge_sort(data, left, mid);
-	merge_sort(data, mid + 1, right);
-	merge(data, left, mid, right);
-}
-
-
-int main()
-{
-	int data[] = { 2, 6, 7, 4, 1, 8, 5 ,3 };
-	merge_sort(data, 0, 7);
-
-	for (auto n : data)
+	while (lower <= upper)
 	{
-		cout << n << ", ";
+		int middle = (lower + upper) / 2;
 	}
-	cout << endl;
+
+	
 }
+
+////std sort() 예제
+//int main()
+//{
+//	//배열의 정렬
+//	int arr[5] = { 4, 2, 3, 5, 1 };
+//	//sort(arr, arr + 5);
+//	//sort(begin(arr), end(arr));
+//	//sort(begin(arr), end(arr), greater<>());	//내림차순
+//	sort(begin(arr), end(arr), less<>());		//오름차순
+//
+//	for (auto n : arr)
+//	{
+//		cout << n << ", ";
+//	}
+//	cout << endl;
+//
+//	//Vector 정렬
+//	vector<string> vec = { "orange", "banana", "apple", "lemon" };
+//	//sort(vec.begin(), vec.end());
+//	sort(vec.begin(), vec.end(), greater<>());
+//
+//	for (auto& a : vec)
+//	{
+//		cout << a << ", ";
+//	}
+//	cout << endl;
+//}
+
+////분할, 정렬데이터의 맨 처음 값을 피벗으로 정하고
+////피벗을 기준으로 왼쪽과 오른쪽으로 데이터를 나눈다
+//int partition(int data[], int left, int right)
+//{
+//	int pivot = data[left];
+//	int i = left + 1;
+//	int j = right;
+//
+//	while (true)
+//	{
+//		//오른 쪽으로 이동할 데이터 찾기
+//		while (data[i] <= pivot && i <= right)
+//		{
+//			i++;
+//		}
+//
+//		//왼쪽으로 이동할 데이터 찾기
+//		while (data[j] > pivot && j > left)
+//		{
+//			j--;
+//		}
+//
+//		if (i < j)
+//		{
+//			swap(data[i], data[j]);
+//		}
+//		else
+//		{
+//			break;
+//		}
+//	}
+//
+//	//피벗을 왼쪽 데이터와 오른쪽 데이터 사이에 넣는다
+//	swap(data[left], data[j]);
+//
+//	return j;
+//}
+//
+//void quick_sort(int data[], int left, int right)
+//{
+//	//기저조건
+//	if (left >= right)
+//		return;
+//
+//	//재귀호출부
+//	int p = partition(data, left, right);
+//	quick_sort(data, left, p-1);			//피벗의 왼쪽 데이터를 퀵정렬
+//	quick_sort(data, p + 1, right);			//피벗의 오른쪽 데이터를 퀵정렬
+//}
+//
+//int main()
+//{
+//	int data[] = { 5, 6, 7, 3, 1, 9, 2, 4, 8 };
+//	quick_sort(data, 0, size(data) - 1);
+//	
+//	for (auto n : data)
+//	{
+//		cout << n << ", ";
+//	}
+//	cout << endl;
+//}
+
+////병합시 병합내용을 담을 임시 변수
+//int buff[256];
+//
+////병합 
+//void merge(int data[], int left, int mid, int right)
+//{
+//	int i = left, j = mid + 1, k = left;
+//
+//	while (i <= mid && j <= right)
+//	{
+//		if (data[i] <= data[j])
+//		{
+//			buff[k++] = data[i++];
+//		}
+//		else
+//		{
+//			buff[k++] = data[j++];
+//		}
+//	}
+//
+//	while (i <= mid)
+//	{
+//		buff[k++] = data[i++];
+//	}
+//
+//	while (j <= right)
+//	{
+//		buff[k++] = data[j++];
+//	}
+//
+//	//정렬된 임시 저장 데이터를 data에 다시 저장
+//	for (int x = left; x <= right; x++)
+//	{
+//		data[x] = buff[x];
+//	}
+//}
+//
+////병합 정렬
+//void merge_sort(int data[], int left, int right)
+//{
+//	//기저 조건
+//	if (left >= right)
+//		return;
+//
+//	//재귀 호출
+//	int mid = (left + right) / 2;
+//	merge_sort(data, left, mid);
+//	merge_sort(data, mid + 1, right);
+//	merge(data, left, mid, right);
+//}
+//
+//
+//int main()
+//{
+//	int data[] = { 2, 6, 7, 4, 1, 8, 5 ,3 };
+//	merge_sort(data, 0, 7);
+//
+//	for (auto n : data)
+//	{
+//		cout << n << ", ";
+//	}
+//	cout << endl;
+//}
 
 
 ////버블 정렬
