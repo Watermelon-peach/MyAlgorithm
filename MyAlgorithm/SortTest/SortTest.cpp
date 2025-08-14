@@ -24,7 +24,7 @@ bool linear_search(int data[], int n, int target)
 }
 
 //이진 탐색 - (오름차순)정렬된 데이터
-bool binarty_search(int data[], int n, int target)
+bool binary_search(int data[], int n, int target)
 {
 	int lower = 0;			//시작 인덱스
 	int upper = n - 1;		//마지막 인덱스
@@ -32,9 +32,22 @@ bool binarty_search(int data[], int n, int target)
 	while (lower <= upper)
 	{
 		int middle = (lower + upper) / 2;
+
+		if (data[middle] == target)
+		{
+			return true;
+		}
+		else if (data[middle] < target)	//찾는 데이터가 middle의 오른쪽에 있다
+		{
+			lower = middle + 1;
+		}
+		else //찾는 데이터가 middle의 왼쪽에 있다
+		{
+			upper = middle - 1;
+		}
 	}
 
-	
+	return false;
 }
 
 ////std sort() 예제

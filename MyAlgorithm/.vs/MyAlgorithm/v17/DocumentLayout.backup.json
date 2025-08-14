@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\project\\MyAlgorithm\\MyAlgorithm\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{439F01D4-EBD7-4C5B-9B44-D94833809696}|TreeTest\\TreeTest.vcxproj|D:\\project\\MyAlgorithm\\MyAlgorithm\\TreeTest\\TreeTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{439F01D4-EBD7-4C5B-9B44-D94833809696}|TreeTest\\TreeTest.vcxproj|solutionrelative:TreeTest\\TreeTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E26C4C9-ECCD-44E5-82B6-ED01838B131A}|SortTest\\SortTest.vcxproj|D:\\project\\MyAlgorithm\\MyAlgorithm\\SortTest\\SortTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1E26C4C9-ECCD-44E5-82B6-ED01838B131A}|SortTest\\SortTest.vcxproj|solutionrelative:SortTest\\SortTest.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -43,19 +47,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "TreeTest.cpp",
+              "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\TreeTest\\TreeTest.cpp",
+              "RelativeDocumentMoniker": "TreeTest\\TreeTest.cpp",
+              "ToolTip": "D:\\project\\MyAlgorithm\\MyAlgorithm\\TreeTest\\TreeTest.cpp*",
+              "RelativeToolTip": "TreeTest\\TreeTest.cpp*",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAF8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-13T02:15:49.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SortTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\SortTest\\SortTest.cpp",
               "RelativeDocumentMoniker": "SortTest\\SortTest.cpp",
-              "ToolTip": "D:\\project\\MyAlgorithm\\MyAlgorithm\\SortTest\\SortTest.cpp*",
-              "RelativeToolTip": "SortTest\\SortTest.cpp*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBwAAAArAAAAAAAAAA==",
+              "ToolTip": "D:\\project\\MyAlgorithm\\MyAlgorithm\\SortTest\\SortTest.cpp",
+              "RelativeToolTip": "SortTest\\SortTest.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-08-12T01:58:56.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "RecursiveTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\RecursiveTest\\RecursiveTest.cpp",
               "RelativeDocumentMoniker": "RecursiveTest\\RecursiveTest.cpp",
@@ -67,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "QueueTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\QueueTest\\QueueTest.cpp",
               "RelativeDocumentMoniker": "QueueTest\\QueueTest.cpp",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "StackTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\StackTest\\StackTest.cpp",
               "RelativeDocumentMoniker": "StackTest\\StackTest.cpp",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ListTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\ListTest\\ListTest.cpp",
               "RelativeDocumentMoniker": "ListTest\\ListTest.cpp",
@@ -103,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ArrayTest.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\ArrayTest\\ArrayTest.cpp",
               "RelativeDocumentMoniker": "ArrayTest\\ArrayTest.cpp",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HelloWorld.cpp",
               "DocumentMoniker": "D:\\project\\MyAlgorithm\\MyAlgorithm\\HelloWorld\\HelloWorld.cpp",
               "RelativeDocumentMoniker": "HelloWorld\\HelloWorld.cpp",
